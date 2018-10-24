@@ -1,20 +1,20 @@
 class Node:
 
-    def __init__(self,info, nextNode=None):
-        self.info = info
-        self.nextNode = nextNode
+    def __init__(me, info, nextNode=None):
+        me.info = info
+        me.nextNode = nextNode
 
-    def getinfo(self):
-        return self.info
+    def getinfo(me):
+        return me.info
 
-    def setinfo(self, val):
-        self.info = val
+    def setinfo(me, val):
+        me.info = val
 
-    def getNextNode(self):
-        return self.nextNode
+    def getNextNode(me):
+        return me.nextNode
 
-    def setNextNode(self, val):
-        self.nextNode = val
+    def setNextNode(me, val):
+        me.nextNode = val
 
 
 class LinkedList:
@@ -26,7 +26,7 @@ class LinkedList:
     def getSize(me):
         return me.size
 
-    def addNode(me,info):
+    def addNode(me, info):
         newNode = Node (info, me.head )
         me.head = newNode
         me.size += 1
@@ -35,19 +35,19 @@ class LinkedList:
     def printNode(me):
         curr = me.head
         while curr:
-            print ( curr.info )
+            print ( curr.info)
             curr = curr.getNextNode ()
 
 
 myList = LinkedList ()
 print ( "Inserting" )
-print ( myList.addNode (8) )
-print ( myList.addNode (2) )
-print ( myList.addNode (1) )
-print ( myList.addNode (5) )
-print ( myList.addNode (3) )
-print ( myList.addNode (7) )
+print ( myList.addNode ( 5 ) )
+print ( myList.addNode ( 10 ) )
+print ( myList.addNode ( 8 ) )
+print ( myList.addNode ( 9 ) )
+print ( myList.addNode ( 22) )
+print ( myList.addNode ( 20) )
 print ( "Printing" )
 myList.printNode ()
-print ( "size" )
+print ( "Size" )
 print ( myList.getSize () )
