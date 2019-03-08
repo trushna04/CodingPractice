@@ -1,0 +1,10 @@
+/* Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+https://leetcode.com/problems/two-sum/
+*/
+n= [2, 7, 11, 15]
+target = 9
+for i in range (len(n)-1):
+    for j in range (i+1,len(n)):
+        if (n[i]+n[j]==target):
+            print(n[i],n[j])
+          
