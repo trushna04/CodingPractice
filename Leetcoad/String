@@ -1,6 +1,0 @@
-#Reverse String
-#https://leetcode.com/problems/reverse-string
-def reverseString(self, s: List[str]) -> None:
-        s1=s[::-1]
-        print(s1)
-        
