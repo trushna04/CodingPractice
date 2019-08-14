@@ -1,0 +1,14 @@
+def binarySearch(arra, target):
+    r=0
+    l=len(arra)-1
+    while l <= r:
+
+        mid = l + (r - l) / 2;
+        if arra[ mid ] == target:       # Check if target is present at mid
+            return mid
+        elif arra[ mid ] < target:       # Check if target is greater then ignore left part
+            l = mid + 1
+        else:
+            r = mid - 1                 # if less then ignore right  part
+    return -1
+print(binarySearch([1,2,3,5,8], 6))
